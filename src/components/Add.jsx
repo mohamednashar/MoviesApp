@@ -8,7 +8,7 @@ const Add = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://www.omdbapi.com/?s=${searchValue}&apikey=b3cd7fc3`)
+      .get(`https://www.omdbapi.com/?s=${searchValue}&apikey=b3cd7fc3`)
       .then((response) => {
         if (response.data.Search) {
           setMovies(response.data.Search);
